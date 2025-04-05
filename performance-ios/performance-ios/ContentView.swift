@@ -1,21 +1,34 @@
-//
-//  ContentView.swift
-//  performance-ios
-//
-//  Created by Mathias Poimer on 05.04.25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @State var feature = ContentFeature()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            Group {
+                if feature.testData.isEmpty {
+                    ProgressView()
+                } else {
+                    List {
+                        ForEach(feature.testData) { item in
+                            VStack(alignment: .leading) {
+                                Text(item.name)
+                                    .font(.body)
+                                    .fontWeight(.bold)
+                                
+                                Text(item.bio)
+                                    .font(.caption)
+                            }
+                        }
+                    }
+                    .accessibilityIdentifier("list-view")
+                }
+            }
+            .task {
+                await feature.loadTestData()
+            }
+            .navigationTitle("Test Data \(feature.testData.count)")
         }
-        .padding()
     }
 }
 

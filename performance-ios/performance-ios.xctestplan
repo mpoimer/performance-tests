@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "B18D6117-9E56-4420-878F-7611838750D5",
+      "name" : "Test Scheme Action",
+      "options" : {
+        "commandLineArgumentEntries" : [
+
+        ]
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:performance-ios.xcodeproj",
+      "identifier" : "EDA804E62DA126D3004F06AE",
+      "name" : "performance-ios"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:performance-ios.xcodeproj",
+        "identifier" : "EDA805002DA135AB004F06AE",
+        "name" : "performance-iosUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
