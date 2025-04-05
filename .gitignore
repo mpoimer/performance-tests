@@ -1,0 +1,87 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+*.lock
+
+# Xcode
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+*.xcworkspace/xcshareddata/
+
+# CocoaPods
+Pods/
+Podfile.lock
+podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# Swift Package Manager
+.build/
+Package.resolved
+.swiftpm/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Android Studio
+.gradle/
+.idea/
+local.properties
+*.iml
+build/
+captures/
+output.json
+*.apk
+*.ap_
+*.cxx/
+*.log
+
+# IntelliJ
+*.iws
+*.ipr
+*.idea/
+out/
+
+# Gradle
+.gradle/
+build/
+!gradle-wrapper.jar
+!gradlew
+!gradlew.bat
+
+# NDK
+.externalNativeBuild/
+
+# Others
+*.keystore
+*.jks
