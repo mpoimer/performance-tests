@@ -20,7 +20,7 @@ data class UIState(
     val isLoading: Boolean = false
 )
 
-class TestFeature(
+class TestViewModel(
     private val context: Context
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(UIState())
@@ -67,14 +67,14 @@ class TestFeature(
     }
 }
 
-class TestFeatureFactory(
+class TestViewModelFactory(
     private val context: Context
 ) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(TestFeature::class.java)) {
+        if (modelClass.isAssignableFrom(TestViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
-            return TestFeature(context) as T
+            return TestViewModel(context) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

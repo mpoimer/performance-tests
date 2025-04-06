@@ -25,12 +25,12 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModelProvider
-import at.poimer.performanceandroid.feature.TestFeature
-import at.poimer.performanceandroid.feature.TestFeatureFactory
+import at.poimer.performanceandroid.feature.TestViewModel
+import at.poimer.performanceandroid.feature.TestViewModelFactory
 import at.poimer.performanceandroid.ui.theme.PerformanceAndroidTheme
 
 class MainActivity : ComponentActivity() {
-    private lateinit var viewModel: TestFeature
+    private lateinit var viewModel: TestViewModel
 
 
     @OptIn(ExperimentalMaterial3Api::class)
@@ -39,10 +39,10 @@ class MainActivity : ComponentActivity() {
 
         viewModel = ViewModelProvider(
             this,
-            TestFeatureFactory(
+            TestViewModelFactory(
                 this
             )
-        )[TestFeature::class.java]
+        )[TestViewModel::class.java]
 
         enableEdgeToEdge()
         setContent {
@@ -59,14 +59,14 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun TopAppBarTitle(viewModel: TestFeature) {
+fun TopAppBarTitle(viewModel: TestViewModel) {
     val uiModel = viewModel.uiState.collectAsState()
 
     Text("Items ${uiModel.value.models.size}")
 }
 
 @Composable
-fun TestList(viewModel: TestFeature, innerPadding: PaddingValues) {
+fun TestList(viewModel: TestViewModel, innerPadding: PaddingValues) {
     val uiModel = viewModel.uiState.collectAsState()
 
     if (uiModel.value.isLoading) {
