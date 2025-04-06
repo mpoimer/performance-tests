@@ -49,13 +49,20 @@ class MainActivity : ComponentActivity() {
             PerformanceAndroidTheme {
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
-                    topBar = { TopAppBar(title = { Text("Hello") }) }
+                    topBar = { TopAppBar(title = { TopAppBarTitle(viewModel = viewModel) }) }
                 ) { innerPadding ->
                     TestList(viewModel = viewModel, innerPadding = innerPadding)
                 }
             }
         }
     }
+}
+
+@Composable
+fun TopAppBarTitle(viewModel: TestFeature) {
+    val uiModel = viewModel.uiState.collectAsState()
+
+    Text("Items ${uiModel.value.models.size}")
 }
 
 @Composable
@@ -73,6 +80,9 @@ fun TestList(viewModel: TestFeature, innerPadding: PaddingValues) {
 
     } else {
         LazyColumn(modifier = Modifier.padding(innerPadding)) {
+            item {
+                Text("this is a test")
+            }
             items(uiModel.value.models) { item ->
                 Column(modifier = Modifier.padding(8.dp)) {
                     Text(item.name, style = TextStyle.Default.copy(fontWeight = FontWeight.Bold))
