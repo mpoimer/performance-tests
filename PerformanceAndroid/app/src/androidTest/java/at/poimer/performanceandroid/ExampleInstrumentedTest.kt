@@ -11,7 +11,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import kotlin.system.measureTimeMillis
 import kotlin.time.Duration
 import kotlin.time.measureTime
 
@@ -37,13 +36,13 @@ class ExampleInstrumentedTest {
     fun testLaunchActivity() {
         val results = mutableListOf<Duration>()
 
-        repeat(10) { i ->
+        repeat(100) { _ ->
             val time = measureTime {
                 val scenario = ActivityScenario.launch(MainActivity::class.java)
 
                 composeTestRule.waitUntilExactlyOneExists(
                     hasText("this is a test"),
-                    timeoutMillis = 3000
+                    timeoutMillis = 2000
                 )
 
                 scenario.close()

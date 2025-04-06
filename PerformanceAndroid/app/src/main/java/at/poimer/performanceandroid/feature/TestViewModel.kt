@@ -33,7 +33,6 @@ class TestViewModel(
     private fun initialLoad() {
         viewModelScope.launch(Dispatchers.IO) {
             setIsLoading(true)
-            delay(2000)
             try {
                 val jsonString = loadJsonFromAssets()
                 val decoded = Json.decodeFromString<List<TestModel>>(jsonString)
