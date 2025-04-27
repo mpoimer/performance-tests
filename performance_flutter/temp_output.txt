@@ -1,0 +1,29 @@
+Resolving dependencies...
+Downloading packages...
+  async 2.12.0 (2.13.0 available)
+  fake_async 1.3.2 (1.3.3 available)
+  leak_tracker 10.0.8 (11.0.1 available)
+  leak_tracker_flutter_testing 3.0.9 (3.0.10 available)
+  leak_tracker_testing 3.0.1 (3.0.2 available)
+  lints 5.1.1 (6.0.0 available)
+  material_color_utilities 0.11.1 (0.12.0 available)
+  vector_math 2.1.4 (2.1.5 available)
+  vm_service 14.3.1 (15.0.0 available)
+  webdriver 3.0.4 (3.1.0 available)
+Got dependencies!
+10 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Checking for wireless devices...
+
+Connected devices:
+Eisenstadt (mobile)             • 00008101-000270C90C91003A            • ios            • iOS 18.4 22E240
+iPhone 16 Pro (mobile)          • 32B95AB4-1EE2-47F5-AA47-6117A00F3FC6 • ios            • com.apple.CoreSimulator.SimRuntime.iOS-18-4 (simulator)
+macOS (desktop)                 • macos                                • darwin-arm64   • macOS 15.4.1 24E263 darwin-arm64
+Mac Designed for iPad (desktop) • mac-designed-for-ipad                • darwin         • macOS 15.4.1 24E263 darwin-arm64
+Chrome (web)                    • chrome                               • web-javascript • Google Chrome 135.0.7049.115
+[1]: Eisenstadt (00008101-000270C90C91003A)
+[2]: iPhone 16 Pro (32B95AB4-1EE2-47F5-AA47-6117A00F3FC6)
+[3]: macOS (macos)
+[4]: Mac Designed for iPad (mac-designed-for-ipad)
+[5]: Chrome (chrome)
+Please choose one (or "q" to quit): 
