@@ -9,6 +9,9 @@ struct ContentView: View {
                 if feature.testData.isEmpty {
                     ProgressView()
                 } else {
+                    Text("flag")
+//                        .hidden()
+                        .accessibilityLabel("flag-text")
                     List {
                         ForEach(feature.testData) { item in
                             VStack(alignment: .leading) {
@@ -21,7 +24,7 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .accessibilityIdentifier("list-view")
+//                    .accessibilityIdentifier("list-view")
                 }
             }
             .task {
