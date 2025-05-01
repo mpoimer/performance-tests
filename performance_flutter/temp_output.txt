@@ -13,17 +13,12 @@ Downloading packages...
 Got dependencies!
 10 packages have newer versions incompatible with dependency constraints.
 Try `flutter pub outdated` for more information.
-Checking for wireless devices...
-
-Connected devices:
-Eisenstadt (mobile)             • 00008101-000270C90C91003A            • ios            • iOS 18.4 22E240
-iPhone 16 Pro (mobile)          • 32B95AB4-1EE2-47F5-AA47-6117A00F3FC6 • ios            • com.apple.CoreSimulator.SimRuntime.iOS-18-4 (simulator)
-macOS (desktop)                 • macos                                • darwin-arm64   • macOS 15.4.1 24E263 darwin-arm64
-Mac Designed for iPad (desktop) • mac-designed-for-ipad                • darwin         • macOS 15.4.1 24E263 darwin-arm64
-Chrome (web)                    • chrome                               • web-javascript • Google Chrome 135.0.7049.115
-[1]: Eisenstadt (00008101-000270C90C91003A)
-[2]: iPhone 16 Pro (32B95AB4-1EE2-47F5-AA47-6117A00F3FC6)
-[3]: macOS (macos)
-[4]: Mac Designed for iPad (mac-designed-for-ipad)
-[5]: Chrome (chrome)
-Please choose one (or "q" to quit): 
+Running Gradle task 'assembleProfile'...                         2,129ms
+✓ Built build/app/outputs/flutter-apk/app-profile.apk (16.1MB)
+Installing build/app/outputs/flutter-apk/app-profile.apk...      2,112ms
+I/flutter (21455): 00:00 +0: Performance Tests Run 0: Measure app launch and data load time
+I/flutter (21455): Text "this is a test" appeared in: 2317 ms
+I/flutter (21455): 00:03 +1: Performance Tests Run 1: Measure app launch and data load time
+D/ProfileInstaller(21455): Installing profile for com.example.performance_flutter
+I/flutter (21455): Text "this is a test" appeared in: 2185 ms
+I/flutter (21455): 00:06 +2: Performance Tests Run 2: Measure app launch and data load time

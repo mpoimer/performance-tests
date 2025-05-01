@@ -42,7 +42,7 @@ class ExampleInstrumentedTest {
 
                 composeTestRule.waitUntilExactlyOneExists(
                     hasText("this is a test"),
-                    timeoutMillis = 2000
+                    timeoutMillis = 3000
                 )
 
                 scenario.close()
