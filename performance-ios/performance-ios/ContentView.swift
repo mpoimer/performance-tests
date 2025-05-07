@@ -1,3 +1,4 @@
+import OSLog
 import SwiftUI
 
 struct ContentView: View {
@@ -11,6 +12,9 @@ struct ContentView: View {
                 } else {
                     Text("this is a test")
                         .accessibilityLabel("test-text")
+                        .onAppear {
+                            os_signpost(.end, log: signpostLog, name: "ElementVisibility", "Prepared UI")
+                        }
                     List {
                         ForEach(feature.testData) { item in
                             VStack(alignment: .leading) {
