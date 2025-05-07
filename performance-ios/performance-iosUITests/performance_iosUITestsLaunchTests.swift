@@ -9,6 +9,21 @@ final class performance_iosUITestsLaunchTests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
     }
+    
+    @MainActor
+    func testAppLaunchTime() throws {
+        let options = XCTMeasureOptions()
+        options.iterationCount = 100
+
+        let app = XCUIApplication()
+
+        measure(
+            metrics: [XCTApplicationLaunchMetric()],
+            options: options
+        ) {
+            app.launch()
+        }
+    }
 
     @MainActor
     func testFullStartupTime() throws {
